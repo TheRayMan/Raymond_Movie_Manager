@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :movies
+
+  resources :videoformats
+
   resources :ratings
 
   get 'welcome/home'

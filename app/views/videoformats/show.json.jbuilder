@@ -1,0 +1,1 @@
+json.extract! @videoformat, :id, :name, :created_at, :updated_at

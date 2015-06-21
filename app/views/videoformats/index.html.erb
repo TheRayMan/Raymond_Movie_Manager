@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Videoformats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @videoformats.each do |videoformat| %>
+      <tr>
+        <td><%= videoformat.name %></td>
+        <td><%= link_to 'Show', videoformat %></td>
+        <td><%= link_to 'Edit', edit_videoformat_path(videoformat) %></td>
+        <td><%= link_to 'Destroy', videoformat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Videoformat', new_videoformat_path %>
