@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :rating %><br>
-    <%= f.collection_select :rating_id, Rating.all, :id, :rate %>
+    <%= f.collection_select :rating_id, Rating.all, :id, :rate  %>
   </div>
   <div class="actions">
     <%= f.submit %>
