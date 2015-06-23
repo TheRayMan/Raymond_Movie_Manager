@@ -25,7 +25,7 @@
            </tr>
            <tr>
              <td><strong>Rating:</strong></td>
-             <td><%= @movie.rating_id %></td>
+             <td><%= @movie.rating.rate if @movie.rating %></td>
            </tr>
            </tbody>
     </table>

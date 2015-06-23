@@ -5,7 +5,7 @@
   <div class="col-sm-4 col-sm-offset-10">
   </div>
 </div> <br> <br>
-<table id="movies" class="table table-bordered">
+<table  class="table table-bordered">
   <thead>
     <tr class="info">
       <th>Title</th>
@@ -24,7 +24,7 @@
         <td><%= movie.length %></td>
         <td><%= movie.release %></td>
         <td><%= movie.videoformat.name %></td>
-        <td><%= movie.rating_id %></td>
+        <td><%= movie.rating.rate if movie.rating %></td>
         <td><%= link_to 'Show', movie %></td>
         <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
         <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
