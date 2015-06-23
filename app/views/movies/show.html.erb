@@ -21,18 +21,17 @@
            </tr>
            <tr>
              <td><strong>Video format:</strong></td>
-             <td><%= @movie.videoformat_id %></td>
+             <td><%= @movie.videoformat.name %></td>
            </tr>
            <tr>
              <td><strong>Rating:</strong></td>
              <td><%= @movie.rating_id %></td>
            </tr>
-
            </tbody>
     </table>
   </table>
 </div>
 
 
-<%= link_to 'Edit', edit_movie_path(@movie), class: "btn btn-default" %>
-<%= link_to 'Back', movies_path, class: "btn btn-default" %>
+<%= link_to 'Edit', edit_movie_path(@movie), class: "btn btn-info" %>
+<%= link_to 'Back', movies_path, class: "btn btn-info" %>

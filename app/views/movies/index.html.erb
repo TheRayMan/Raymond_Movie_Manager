@@ -1,16 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Movies</h1>
-
-<table class="movie">
+<h1 class="h">Listing Movies</h1>
+<div class="form-group">
+  <div class="col-sm-4 col-sm-offset-10">
+  </div>
+</div> <br> <br>
+<table id="movies" class="table table-bordered">
   <thead>
-    <tr>
+    <tr class="info">
       <th>Title</th>
       <th>Length</th>
       <th>Release</th>
       <th>Videoformat</th>
       <th>Rating</th>
-      <th colspan="3"></th>
+      <th colspan="3" col="5">Options</th>
     </tr>
   </thead>
 
@@ -20,7 +23,7 @@
         <td><%= movie.title %></td>
         <td><%= movie.length %></td>
         <td><%= movie.release %></td>
-        <td><%= movie.videoformat_id %></td>
+        <td><%= movie.videoformat.name %></td>
         <td><%= movie.rating_id %></td>
         <td><%= link_to 'Show', movie %></td>
         <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
@@ -32,4 +35,4 @@
 
 <br>
 
-<%= link_to 'New Movie', new_movie_path, class: "btn btn-default" %>
+<!--%= link_to 'New Movie', new_movie_path, class: "btn btn-default" %> -->
