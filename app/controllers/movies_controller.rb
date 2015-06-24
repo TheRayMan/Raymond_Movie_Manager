@@ -4,7 +4,10 @@ class MoviesController < ApplicationController
   # GET /movies
   # GET /movies.json
   def index
-    @movies = Movie.all
+    @search = Movie.search(params[:f])
+    @movies = @search.result
+    @movie = Movie.order(params[:sort])
+    @movies = Movie.order(:title).page(params[:page]).per(5)
   end
 
   # GET /movies/1

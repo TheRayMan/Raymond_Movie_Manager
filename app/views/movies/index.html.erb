@@ -1,19 +1,28 @@
 <p id="notice"><%= notice %></p>
 
 <h1 class="h">Listing Movies</h1>
+<%= paginate @movies %>
+<%= search_form_for @search do |f| %>
+    <div class="field">
+      <% f.label :title_cont, "Name contains" %>
+      <%= f.text_field :title_cont %>
+    </div>
+    <div class="actions"><%= f.submit "Search" %></div>
+    <% end %>
 <div class="form-group">
-  <div class="col-sm-4 col-sm-offset-10">
+  <div class="col-sm-4 ">
   </div>
 </div> <br> <br>
 <table  class="table table-bordered">
+
   <thead>
     <tr class="info">
-      <th>Title</th>
-      <th>Length</th>
-      <th>Release</th>
-      <th>Videoformat</th>
-      <th>Rating</th>
-      <th colspan="3" col="5">Options</th>
+      <th class="info"><%= link_to "Title", :sort => "title" %></th>
+      <th class="info"><%= link_to "Length", :sort => "length" %></th>
+      <th class="info"><%= link_to "Release", :sort => "release" %></th>
+      <th class="info"><%= link_to "Videoformat", :sort => "videoformat" %></th>
+      <th class="info"><%= link_to "Rating", :sort => "rating" %></th>
+      <th colspan="3" col="5" class="info">Options</th>
     </tr>
   </thead>
 
